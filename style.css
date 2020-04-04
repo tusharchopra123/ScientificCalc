@@ -1,0 +1,107 @@
+#navbar-special{
+font-family: 'Baloo Da 2', cursive;
+font-weight: 800;
+color: #ffffff;
+padding-bottom: 0.5rem;
+}
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+@-ms-viewport {
+    width: device-width ;
+  }
+
+#navbar-special1{
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 800;
+    color: #ffffff;
+    
+    }
+.nav-link{
+    padding-bottom: 0;
+}
+.navbar-expand-xl .navbar-nav .nav-link{
+    padding: 0;
+}
+.bg-info{
+    background: linear-gradient(-80deg, #10A48F, #1670C07D);
+}
+.specialnavbar{
+    text-align: right;
+}
+.jumbotron{
+    margin-top: 5rem;
+}
+.border {
+
+    border: 1px solid #adb1b5 !important;
+}
+/* .table-special{
+    margin-top: 6rem
+} */
+.special{
+    height: 1.60rem;
+    width: 1.25rem;
+}
+.text-dark {
+    color: #000 !important;
+}
+.secondary{
+    font-size: 2.5rem;
+}
+.hover:hover{
+    background: #82848382;
+}
+.sidebar{
+    float: left;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+.bg-secondary {
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 1.7rem;
+    background: linear-gradient(-80deg, #10A48FB3, #1670C0A1)
+}
+.rightside{
+margin-top: 5rem;
+float: right;
+width: 75%
+}
+.icon{
+    font-size: 2rem;
+}
+.photo{
+    width:60%
+}
+.border-right{
+    border-color:  #1670C0A1;
+}
+.skills{   
+    color: aliceblue;
+    font-size: 120%;
+    background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+}
+.font1
+{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 120%;
+}
+sup {
+    top: 0.35rem;
+
+}
+.scifun{
+    top: 0.35em;
+    text-align: center;
+}
+.font{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 120%;
+}
+
+ /* body{
+    background: url(../imgs/background.png);
+}  */

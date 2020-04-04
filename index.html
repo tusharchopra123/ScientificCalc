@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./imgs/icon.png">
     <script src="https://kit.fontawesome.com/98e8f57408.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:400,500,800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="../node_modules/mathjs/dist/math.min.js"></script>
-    <script src="../node_modules/math-expression-evaluator/dist/browser/math-expression-evaluator.js"></script>
+    <script src="./scripts/math.min.js.min.js"></script>
+    <script src="./scripts/math-expression-evaluator.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ScientificCalc</title>
 </head>
 <body>
     <header class="navbar navbar-top fixed-top mb-20 navbar-expand-md navbar-dark bg-info">
@@ -34,63 +35,63 @@
                     </td>
                 </tr>
                 <tr>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='x2'><img width="40" height="24" src="images/x2.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='xy'><img width="40" height="24" src="../imgs/xy.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='cos'>cos</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='sine'>sin</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='tan'>tan</button></td>
-                    <td colspan="2"><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click = "ac">AC</button></td>
-                    <td ><button type="button" class="btn py-3 pl-0 pr-4 btn-light justify-content-center d-flex border rounded col text-center" @click='backspace'><i class="fas fa-backspace special fa-2x"></i></button></td>
-                    <td ><button type="button" class="btn py-3 pl-2 pr-3 btn-warning justify-content-center d-flex border rounded col" @click='divide'><i class="fas fa-divide p-2 special"></i></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='x2'>x<sup>2</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='xy'>x<sup>y</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='cos'>cos</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='sine'>sin</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='tan'>tan</button></td>
+                    <td colspan="2"><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3  px-xl-4 btn-light justify-content-center d-flex border rounded col" @click = "ac">AC</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 pt-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col text-center" @click='backspace'>Back</i></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-warning justify-content-center d-flex border rounded col" @click='divide'>÷</button></td>
                 </tr>
                 <tr>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='x3'><img width="40" height="24" src="../imgs/x3.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='x1y'><img width="30" src="../imgs/xpoweribyy.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='asin'><img width="40" height="24" src="../imgs/asin.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='acos'><img width="40" height="24" src="../imgs/acos.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='atan'><img width="40" height="24" src="../imgs/atan.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='seven'>7</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='eight'>8</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='nine'>9</button></td>
-                    <td ><button type="button" class="btn p-3 btn-warning justify-content-center d-flex border rounded col" @click='multiply'>X</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='x3'>x<sup>3</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='x1y'><sup class="scifun align-self-start">y</sup>&#8730;x</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='asin'>sin<sup>-1</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='acos'>cos<sup>-1</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='atan'>tan<sup>-1</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='seven'>7</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='eight'>8</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='nine'>9</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-warning justify-content-center d-flex border rounded col" @click='multiply'>x</button></td>
                 </tr>
                 <tr>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='x12'><img width="40" height="24" src="../imgs/squarerootx.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='antilog'><img width="40" height="24" src="../imgs/antilogx.png" ></button></td>
-                    <td  colspan="2"><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='log'>log</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='mod'>mod</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='four'>4</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='five'>5</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='six'>6</button></td>
-                    <td ><button type="button" class="btn p-3 btn-warning justify-content-center d-flex border rounded col" @click ='minus'>-</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='x12'>&#8730;x</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='antilog'>10<sup>x</sup></button></td>
+                    <td  colspan="2"><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='log'>log</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='mod'>mod</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='four'>4</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='five'>5</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='six'>6</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-warning justify-content-center d-flex border rounded col" @click ='minus'>-</button></td>
                 </tr>
                 <tr>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='inverse'>1/x</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='exp'><img width="40" height="24" src="../imgs/expx.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='ln'>ln</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='deg'>Deg</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='rad'>Rad</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='one'>1</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='two'>2</button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='three'>3</button></td>
-                    <td ><button type="button" class="btn p-3 btn-warning justify-content-center d-flex border rounded col" @click='plus'>+</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='inverse'>1/x</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='exp'><i>e</i><sup>x</sup></button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='ln'>ln</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='deg'>Deg</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='rad'>Rad</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='one'>1</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='two'>2</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='three'>3</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-warning justify-content-center d-flex border rounded col" @click='plus'>+</button></td>
                 </tr>
                 <tr>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='reload'>Rst</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='pi'><img width="40" height="24" src="../imgs/pi.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='factorial'>n!</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='openB'>(</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='closeB'>)</button></td>
-                    <td ><button type="button" class="btn pl-1 pr-0 py-3 btn-light justify-content-center d-flex border rounded col" @click='plusminus'><img width="30" height="24" src="../imgs/plusminus.png" ></button></td>
-                    <td ><button type="button" class="btn p-3 btn-white justify-content-center d-flex border rounded col hover" @click='zero'>0</button></td>
-                    <td ><button type="button" class="btn p-3 btn-light justify-content-center d-flex border rounded col" @click='dot'>.</button></td>
-                    <td ><button type="button" class="btn p-3 btn-info justify-content-center d-flex border rounded col" @click='equal'>=</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='reload'>Rst</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='pi'>π</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='factorial'>n!</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='openB'>(</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='closeB'>)</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='plusminus'>±</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-white justify-content-center d-flex border rounded col hover" @click='zero'>0</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-light justify-content-center d-flex border rounded col" @click='dot'>.</button></td>
+                    <td ><button type="button" class="btn font p-md-3 px-xs-0 py-xs-3 px-sm-0 py-sm-3 px-xl-4 btn-info justify-content-center d-flex border rounded col" @click='equal' >=</button></td>
                 </tr>
             </table>
         </div>
         </div>
         </section>
-    <footer class="navbar justify-content-end navbar-top p-md-4 p-sm-3 fixed-bottom mb-0 navbar-expand-md navbar-dark bg-info">
+    <footer class="navbar justify-content-end navbar-top p-md-2 p-sm-2 fixed-bottom mb-0 navbar-expand-md navbar-dark bg-info">
         <div class=" d-flex justify-content-end">
             <a href="https://twitter.com/tushar386" target="_blank"><i class="fab text-white fa-3x fa-twitter-square pr-2"></i></a>
             <a href="https://www.linkedin.com/in/tushar-chopra-bb244412b/" target="_blank"><i class="fab text-white fa-3x fa-linkedin pr-2"></i></a>
@@ -99,7 +100,7 @@
 
         </div>     
     </footer>     
-    <script src="calculate.js"></script>
+    <script src="./scripts/calculate.js"></script>
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
