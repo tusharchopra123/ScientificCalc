@@ -3,4 +3,6 @@ This is a basic Scientific Calculator develped using javascript and using [math-
 \
 The Website is Published on the following link :- [https://tusharchopra123.github.io/ScientificCalc/](https://tusharchopra123.github.io/ScientificCalc/)\
 \
-It uses HTML,VueJs,MathJs,CSS
+It uses HTML, VueJs, MathJs, CSS\
+\
+
