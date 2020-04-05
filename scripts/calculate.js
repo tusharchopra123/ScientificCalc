@@ -41,8 +41,10 @@ function myfunction(event){
         document.getElementById("prev").innerText += '/'
     }else if(37==event.keyCode){
         document.getElementById("prev").innerText += 'Mod'
-    }else if(8==event.keyCode){
-        console.log("Heloo")
+    }else if(40==event.keyCode){
+        document.getElementById("prev").innerText += '('
+    }else if(41==event.keyCode){
+        document.getElementById("prev").innerText += ')'
     }else if(61==event.keyCode||13==event.keyCode){
         var prevs = document.getElementById("prev").textContent
         if(flag == 1){
