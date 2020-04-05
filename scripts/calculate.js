@@ -5,13 +5,59 @@ function mapping(x,y,sym){
         return math.multiply(x, y)
     }
 }
+var previous = "";
+var flag="0"
 function yroot(x,y){
     return   x + '^' + y 
 }
+function myfunction(event){
+    console.log(event.keyCode)
+    if(49==event.keyCode){
+        document.getElementById("prev").innerText += 1
+    }else if(50==event.keyCode){
+        document.getElementById("prev").innerText += 2
+    }else if(51==event.keyCode){
+        document.getElementById("prev").innerText += 3 
+    }else if(52==event.keyCode){
+        document.getElementById("prev").innerText += 4
+    }else if(53==event.keyCode){
+        document.getElementById("prev").innerText += 5
+    }else if(54==event.keyCode){
+        document.getElementById("prev").innerText += 6
+    }else if(55==event.keyCode){
+        document.getElementById("prev").innerText += 7
+    }else if(56==event.keyCode){
+        document.getElementById("prev").innerText += 8
+    }else if(57==event.keyCode){
+        document.getElementById("prev").innerText += 9
+    }else if(43==event.keyCode){
+        document.getElementById("prev").innerText += '+'
+    }else if(45==event.keyCode){
+        document.getElementById("prev").innerText += '-'
+    }else if(42==event.keyCode){
+        document.getElementById("prev").innerText += '*'
+    }else if(47==event.keyCode){
+        document.getElementById("prev").innerText += '/'
+    }
+    else if(61==event.keyCode||13==event.keyCode){
+        var prevs = document.getElementById("prev").textContent
+        if(flag == 1){
+            var length = document.getElementById("prev").textContent.length
+            var power = prevs.charAt(length-1)
+            prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
+        }
+       var str = mexp.eval(prevs);
+       console.log(str)
+       document.getElementById("ans").innerText = str;
+       document.getElementById("prev").innerText = str;
+    }
+}
+document.getElementById("bdy").addEventListener("keypress",myfunction);
+
 var app= new Vue({
     el:'#app',
     data:{
-        previous: "",
+        previous: "" || previous,
         first:"",
         symbol: "",
         answer: 0,
@@ -23,186 +69,168 @@ var app= new Vue({
     },
     methods:{
         zero(){
-            this.first +='0';
-            this.previous +='0';
+            document.getElementById("prev").innerText += 0
         },one(){
-            this.first += '1';
-            this.previous += '1';
+            document.getElementById("prev").innerText += 1
         },two(){
-            this.first += '2';
-            this.previous += '2';
+            document.getElementById("prev").innerText += 2
         },three(){
-            this.first += '3';
-            this.previous += '3';
+            document.getElementById("prev").innerText += 3
         },four(){
-            this.first += '4';
-            this.previous += '4';
+            document.getElementById("prev").innerText += 4
         },five(){
-            this.first += '5';
-            this.previous += '5';
+            document.getElementById("prev").innerText += 5
         },six(){
-            this.first += '6';
-            this.previous += '6';
+            document.getElementById("prev").innerText += 6
         },seven(){
-            this.first += '7';
-            this.previous += '7';
+            document.getElementById("prev").innerText += 7
         },eight(){
-            this.first += '8';
-            this.previous += '8';
+            document.getElementById("prev").innerText += 8
         },nine(){
-            this.first += '9';
-            this.previous +='9';
+            document.getElementById("prev").innerText += 9
         },
         plus(){
-           this.symbol='+'
-            this.first += '+';  
-            this.previous+='+';
-            
+            document.getElementById("prev").innerText += '+';           
         },multiply(){
-            this.first += 'x';
-            this.previous+='*';
+            document.getElementById("prev").innerText += '*'
         },minus(){
-            this.first += '-';
-            this.previous += '-';
-            this.symbol= '-'
+            document.getElementById("prev").innerText += '-'
         },divide(){
-            this.first +='/';
-            this.previous +='/';
-            this.symbol
+            document.getElementById("prev").innerText += '/'
         },mod(){
-            this.first +=' Mod ';
-            this.previous +='Mod';
-            this.symbol += 'M'
+            document.getElementById("prev").innerText += 'Mod'
         },log(){
-            this.first += 'log ';
-            this.previous += 'log';
+            document.getElementById("prev").innerText += 'log'
         },ln(){
-            this.first += 'ln ';
-            this.previous += 'ln';
+            document.getElementById("prev").innerText += 'ln'
         },cos(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'cos('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },sine(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'sin('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },tan(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'tan('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
-        
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },asin(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'asin('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },acos(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'acos('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },atan(){
-            var angle = this.previous;
+            var angle = document.getElementById("prev").textContent;
             var str = 'atan('+ angle +')';
-            this.first = str;
-            this.previous = str;
-            this.answer= mexp.eval(str);
+            document.getElementById("prev").innerText = str;
+            var inter= mexp.eval(str);
+            document.getElementById("ans").innerText = inter
         },x2(){
-            this.first += '^2';
-            this.previous += '^2';
-            this.answer = mexp.eval(this.previous);
+            document.getElementById("prev").innerText += '^2';
+            var inter = mexp.eval(document.getElementById("prev").textContent);
+            document.getElementById("ans").innerText = inter;
         },xy(){
-            this.first += '^';
-            this.previous += '^';
+            document.getElementById("prev").innerText += '^';
         },x3(){
-            this.first += '^3';
-            this.previous += '^3';
-            this.answer = mexp.eval(this.previous);
+            document.getElementById("prev").innerText += '^3';
+            var inter = mexp.eval(document.getElementById("prev").textContent);
+            document.getElementById("ans").innerText = inter;
         },x1y(){
-            var str = '^1/';
             this.symbol = 'sp'
-            this.first += str;
-            this.previous = ''      
+            flag=1
+            document.getElementById("prev").innerText += '^1/';  
         },x12(){
-            this.first += '^1/2';
-            this.previous += '^'+1/2;
-            this.answer = mexp.eval(this.previous);
+            var str = '^'+ 1/2;
+            document.getElementById("prev").innerText += str;
+            var inter = mexp.eval(document.getElementById("prev").textContent);
+            document.getElementById("ans").innerText = inter;
         },antilog(){
             this.first = '10^' + this.previous;
-            this.previous = this.first;
-            this.answer = mexp.eval(this.previous);
+            document.getElementById("prev").innerText = '10^'+ document.getElementById("prev").textContent;
+            var inter = mexp.eval(document.getElementById("prev").textContent);
+            document.getElementById("ans").innerText = inter;
         },dot(){
-            this.first += '.';
-            this.previous += '.';
+            document.getElementById("prev").innerText = '.';
         },inverse(){
-            this.first = '1/'+ this.previous;
-            this.answer = 1/parseInt(this.previous);
-            this.previous = this.first;
+            document.getElementById("prev").innerText = '1/'+ document.getElementById("prev").textContent;
+            var length = document.getElementById("prev").textContent.length;
+            var value = document.getElementById("prev").textContent.charAt(length-1)
+            var inter = 1/parseFloat(value);
+            document.getElementById("ans").innerText = inter;
         },exp(){
-            this.first = 'e^'+this.previous;
-            this.previous = this.first
-            this.answer = mexp.eval(this.previous);
-         
+            document.getElementById("prev").innerText = 'e^'+document.getElementById("prev").textContent;
+            var inter = mexp.eval(document.getElementById("prev").textContent);
+            document.getElementById("ans").innerText = inter;
         },pi(){
-            if(this.previous==''){
-                this.answer = 1;
-            }else if(this.answer==this.previous){
-                this.answer = this.previous;
+            var prevs = document.getElementById("prev").textContent;
+            var inter = document.getElementById("ans").textContent;
+            if(prevs==''){
+                inter = 1;
+            }else if(inter==prevs){
+                inter = prevs;
             }else{
-                this.answer = this.previous
+                inter = prevs
             }
-            this.first = '3.141592653589793238462643*'+this.answer;
-            this.previous = this.first;
-            this.answer = mexp.eval(this.previous);
+            prevs = '3.141592653589793238462643*'+inter;
+            document.getElementById("prev").innerText = prevs;
+            var answer = mexp.eval(prevs)
+            document.getElementById("ans").innerText = answer;
         },factorial(){
             var i;
-            var n = parseInt(this.previous);
+            var n = parseInt(document.getElementById("prev").textContent);
+            var str=document.getElementById("prev").textContent;
             for(i=1;i<n;i++){
-                this.previous += '*'+(n-i);
+                 str += '*'+(n-i);
             }
-            this.answer = mexp.eval(this.previous);
+            var answer = mexp.eval(str);
+            document.getElementById("ans").innerText = answer
+            document.getElementById("prev").innerText = answer
         },openB(){
-            this.first += '(';
-            this.previous += '(';
+            document.getElementById("prev").innerText += '('
         },closeB(){
-            this.first += ')';
-            this.previous += ')';
+            document.getElementById("prev").innerText += ')'
         },plusminus(){
-        if(this.previous.charAt(0)=='-'){
-              this.previous = this.previous.substring(1,this.previous.length)
-              this.first = this.previous
-              this.answer = this.previous;
-          }else if(this.previous.length==1){
-              this.previous = '-'+this.previous;
-              this.first = this.previous
+            var prevs = document.getElementById("prev").textContent;
+            var inter = document.getElementById("ans").textContent;
+            if(prevs.charAt(0)=='-'){
+              prevs = prevs.substring(1,prevs.length)
+              document.getElementById("prev").innerText = prevs;
+              document.getElementById("ans").innerText = prevs;
+          }else if(prevs.length==1){
+              prevs = '-'+prevs;
+              document.getElementById("prev").innerText = prevs;
           }
           else{
-            this.previous += '-';
-            this.first = this.previous
+            prevs += '-';
+            document.getElementById("prev").innerText = prevs;
           }
         },equal(){
+            var prevs = document.getElementById("prev").textContent
             if(this.symbol =='sp'){
-                this.previous = yroot(this.first.split("^")[0],parseFloat(1/parseInt(this.previous)))
-                console.log(this.previous)
+                var length = document.getElementById("prev").textContent.length
+                var power = prevs.charAt(length-1)
+                prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
             }
-           this.answer = mexp.eval(this.previous);
-           this.first = this.answer
-           this.previous = this.answer.toString()
-            
+           var str = mexp.eval(prevs);
+           document.getElementById("ans").innerText = str;
+           document.getElementById("prev").innerText = str;
         },ac(){
-            this.first='';
-            this.previous='';
-            this.demo=0;
-            this.answer=0;
+            document.getElementById("prev").innerText = ''
+            document.getElementById("ans").innerText = 0;
         },backspace(){
             if(this.symbol == 'M'){
                 this.previous = this.previous.substring(0,this.previous.length -3)
