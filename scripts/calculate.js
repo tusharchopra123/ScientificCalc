@@ -276,3 +276,31 @@ var app= new Vue({
         }
     }
 })
+
+$('#bdy').on('keypress',function(){
+
+}).on('keydown',function(event){
+    if(event.keyCode==8){
+        var prevs = document.getElementById("prev").textContent
+        var length = prevs.length
+        if(length==1){
+            document.getElementById("prev").innerText=''
+            document.getElementById("ans").innerText = 0;
+        }
+        if(prevs.charAt(length-1)=='d'||prevs.charAt(length-1)=='g'){
+            prevs = prevs.substring(0,length-3)
+            document.getElementById("prev").innerText = prevs;
+        }else if(prevs.charAt(length-1)=='n'){
+            prevs = prevs.substring(0,length-2)
+            document.getElementById("prev").innerText = prevs;
+        }else{
+            prevs = prevs.substring(0,length-1)
+            document.getElementById("prev").innerText = prevs;
+        }
+        event.preventDefault();
+    }else if(27==event.keyCode){
+        document.getElementById("prev").innerText = ''
+        document.getElementById("ans").innerText = 0;
+        event.preventDefault();
+    }
+})
