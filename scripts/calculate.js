@@ -10,7 +10,6 @@ function yroot(x,y){
     return   x + '^' + y 
 }
 function myfunction(event){
-    console.log(event.keyCode)
     if(48==event.keyCode){
         document.getElementById("prev").innerText += 0
     }else if(49==event.keyCode){
@@ -53,7 +52,6 @@ function myfunction(event){
             prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
         }
        var str = mexp.eval(prevs);
-       console.log(str)
        document.getElementById("ans").innerText = str;
        document.getElementById("prev").innerText = str;
        flag=0;
@@ -96,8 +94,7 @@ var app= new Vue({
             document.getElementById("prev").innerText += 8
         },nine(){
             document.getElementById("prev").innerText += 9
-        },
-        plus(){
+        },plus(){
             document.getElementById("prev").innerText += '+';           
         },multiply(){
             document.getElementById("prev").innerText += '*'
