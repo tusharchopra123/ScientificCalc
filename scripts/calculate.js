@@ -5,14 +5,15 @@ function mapping(x,y,sym){
         return math.multiply(x, y)
     }
 }
-var previous = "";
 var flag="0"
 function yroot(x,y){
     return   x + '^' + y 
 }
 function myfunction(event){
     console.log(event.keyCode)
-    if(49==event.keyCode){
+    if(48==event.keyCode){
+        document.getElementById("prev").innerText += 0
+    }else if(49==event.keyCode){
         document.getElementById("prev").innerText += 1
     }else if(50==event.keyCode){
         document.getElementById("prev").innerText += 2
@@ -38,8 +39,11 @@ function myfunction(event){
         document.getElementById("prev").innerText += '*'
     }else if(47==event.keyCode){
         document.getElementById("prev").innerText += '/'
-    }
-    else if(61==event.keyCode||13==event.keyCode){
+    }else if(37==event.keyCode){
+        document.getElementById("prev").innerText += 'Mod'
+    }else if(8==event.keyCode){
+        console.log("Heloo")
+    }else if(61==event.keyCode||13==event.keyCode){
         var prevs = document.getElementById("prev").textContent
         if(flag == 1){
             var length = document.getElementById("prev").textContent.length
@@ -50,6 +54,8 @@ function myfunction(event){
        console.log(str)
        document.getElementById("ans").innerText = str;
        document.getElementById("prev").innerText = str;
+       flag=0;
+       event.preventDefault();
     }
 }
 document.getElementById("bdy").addEventListener("keypress",myfunction);
@@ -57,7 +63,7 @@ document.getElementById("bdy").addEventListener("keypress",myfunction);
 var app= new Vue({
     el:'#app',
     data:{
-        previous: "" || previous,
+        previous: "" ,
         first:"",
         symbol: "",
         answer: 0,
@@ -98,7 +104,7 @@ var app= new Vue({
         },divide(){
             document.getElementById("prev").innerText += '/'
         },mod(){
-            document.getElementById("prev").innerText += 'Mod'
+            document.getElementById("prev").innerText += 'Mod' 
         },log(){
             document.getElementById("prev").innerText += 'log'
         },ln(){
@@ -228,30 +234,41 @@ var app= new Vue({
            var str = mexp.eval(prevs);
            document.getElementById("ans").innerText = str;
            document.getElementById("prev").innerText = str;
+           this.symbol = ''
         },ac(){
             document.getElementById("prev").innerText = ''
             document.getElementById("ans").innerText = 0;
         },backspace(){
-            if(this.symbol == 'M'){
-                this.previous = this.previous.substring(0,this.previous.length -3)
-                this.first = this.first.substring(0,this.first.length-5);
+            var prevs = document.getElementById("prev").textContent
+            var length = prevs.length
+            if(prevs.charAt(length-1)=='d'||prevs.charAt(length-1)=='g'){
+                prevs = prevs.substring(0,length-3)
+                document.getElementById("prev").innerText = prevs;
+            }else if(prevs.charAt(length-1)=='n'){
+                prevs = prevs.substring(0,length-2)
+                document.getElementById("prev").innerText = prevs;
             }else{
-            this.first = this.first.substring(0,this.first.length-1);
-            this.previous = this.previous.substring(0,this.previous.length -1)
-            }
+                prevs = prevs.substring(0,length-1)
+                document.getElementById("prev").innerText = prevs;
+            }  
         },reload(){
             location.reload();
         },deg(){
-            if(this.answer==0){
-                this.answer = this.previous
+            var prevs = document.getElementById("prev").textContent;
+            var inter = document.getElementById("ans").textContent;
+            if(inter==0){
+                inter = prevs
             }
-            this.answer = (this.answer*180)/3.141592653589793238462643;
+            inter = (inter*180)/3.141592653589793238462643;
+            document.getElementById("ans").innerText = inter;
         },rad(){
-            if(this.answer==0){
-                this.answer = this.previous
+            var prevs = document.getElementById("prev").textContent;
+            var inter = document.getElementById("ans").textContent;
+            if(inter==0){
+                inter = prevs
             }
-            this.answer = (this.answer*3.141592653589793238462643)/180;
-
+            inter = (inter*3.141592653589793238462643)/180;
+            document.getElementById("ans").innerText = inter;
         }
     }
 })
