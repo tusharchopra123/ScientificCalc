@@ -44,6 +44,8 @@ function myfunction(event){
         document.getElementById("prev").innerText += '('
     }else if(41==event.keyCode){
         document.getElementById("prev").innerText += ')'
+    }else if(46==event.keyCode){
+        document.getElementById("prev").innerText += '.'
     }else if(61==event.keyCode||13==event.keyCode){
         var prevs = document.getElementById("prev").textContent
         if(flag == 1){
@@ -169,7 +171,7 @@ var app= new Vue({
             var inter = mexp.eval(document.getElementById("prev").textContent);
             document.getElementById("ans").innerText = inter;
         },dot(){
-            document.getElementById("prev").innerText = '.';
+            document.getElementById("prev").innerText += '.';
         },inverse(){
             document.getElementById("prev").innerText = '1/'+ document.getElementById("prev").textContent;
             var length = document.getElementById("prev").textContent.length;
