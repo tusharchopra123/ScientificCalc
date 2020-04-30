@@ -82,7 +82,7 @@ function myfunction(event){
             var power = prevs.charAt(length-1)
             prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
         }
-       var str = mexp.eval(prevs);
+       var str = mexp.eval(prevs).toFixed(5);
        document.getElementById("ans").innerText = str;
        document.getElementById("prev").innerText = str;
        flag=0;
@@ -143,47 +143,47 @@ var app= new Vue({
             var angle = document.getElementById("prev").textContent;
             var str = 'cos('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },sine(){
             var angle = document.getElementById("prev").textContent;
             var str = 'sin('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },tan(){
             var angle = document.getElementById("prev").textContent;
             var str = 'tan('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },asin(){
             var angle = document.getElementById("prev").textContent;
             var str = 'asin('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },acos(){
             var angle = document.getElementById("prev").textContent;
             var str = 'acos('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },atan(){
             var angle = document.getElementById("prev").textContent;
             var str = 'atan('+ angle +')';
             document.getElementById("prev").innerText = str;
-            var inter= mexp.eval(str);
+            var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
         },x2(){
             document.getElementById("prev").innerText += '^2';
-            var inter = mexp.eval(document.getElementById("prev").textContent);
+            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },xy(){
             document.getElementById("prev").innerText += '^';
         },x3(){
             document.getElementById("prev").innerText += '^3';
-            var inter = mexp.eval(document.getElementById("prev").textContent);
+            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },x1y(){
             this.symbol = 'sp'
@@ -192,12 +192,12 @@ var app= new Vue({
         },x12(){
             var str = '^'+ 1/2;
             document.getElementById("prev").innerText += str;
-            var inter = mexp.eval(document.getElementById("prev").textContent);
+            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },antilog(){
             this.first = '10^' + this.previous;
             document.getElementById("prev").innerText = '10^'+ document.getElementById("prev").textContent;
-            var inter = mexp.eval(document.getElementById("prev").textContent);
+            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },dot(){
             document.getElementById("prev").innerText += '.';
@@ -205,15 +205,15 @@ var app= new Vue({
             document.getElementById("prev").innerText = '1/'+ document.getElementById("prev").textContent;
             var length = document.getElementById("prev").textContent.length;
             var value = document.getElementById("prev").textContent.charAt(length-1)
-            var inter = 1/parseFloat(value);
+            var inter = 1/parseFloat(value).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },exp(){
             document.getElementById("prev").innerText = 'e^'+document.getElementById("prev").textContent;
-            var inter = mexp.eval(document.getElementById("prev").textContent);
+            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },pi(){
             var prevs = document.getElementById("prev").textContent;
-            var inter = document.getElementById("ans").textContent;
+            var inter = document.getElementById("ans").textContent.toFixed(5);
             if(prevs==''){
                 inter = 1;
             }else if(inter==prevs){
@@ -223,7 +223,7 @@ var app= new Vue({
             }
             prevs = '3.141592653589793238462643*'+inter;
             document.getElementById("prev").innerText = prevs;
-            var answer = mexp.eval(prevs)
+            var answer = mexp.eval(prevs).toFixed(5)
             document.getElementById("ans").innerText = answer;
         },factorial(){
             var i;
@@ -261,7 +261,7 @@ var app= new Vue({
                 var power = prevs.charAt(length-1)
                 prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
             }
-           var str = mexp.eval(prevs);
+           var str = mexp.eval(prevs).toFixed(5);
            document.getElementById("ans").innerText = str;
            document.getElementById("prev").innerText = str;
            this.symbol = ''
@@ -293,7 +293,7 @@ var app= new Vue({
             if(inter==0){
                 inter = prevs
             }
-            inter = (inter*180)/3.141592653589793238462643;
+            inter = ((inter*180)/3.141592653589793238462643).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },rad(){
             var prevs = document.getElementById("prev").textContent;
@@ -301,7 +301,7 @@ var app= new Vue({
             if(inter==0){
                 inter = prevs
             }
-            inter = (inter*3.141592653589793238462643)/180;
+            inter = ((inter*3.141592653589793238462643)/180).toFixed(5);
             document.getElementById("ans").innerText = inter;
         }
     }
