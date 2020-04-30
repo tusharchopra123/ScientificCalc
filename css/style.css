@@ -33,7 +33,7 @@ padding-bottom: 0.5rem;
 
 .border {
 
-    border: 1px solid #adb1b5 !important;
+    border: 1px solid #e9e9eb !important;
 }
 /* .table-special{
     margin-top: 6rem
@@ -113,7 +113,7 @@ body{
     padding-top: 70px;
     padding-bottom: 75px;
 
-
+    background-color: #f1f2f3;
 }
 footer{
     bottom: 0;
