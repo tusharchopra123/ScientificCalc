@@ -221,7 +221,7 @@ var app= new Vue({
             }else{
                 inter = prevs
             }
-            prevs = '3.141592653589793238462643*'+inter;
+            prevs = '3.141592653589*'+inter;
             document.getElementById("prev").innerText = prevs;
             var answer = mexp.eval(prevs).toFixed(5)
             document.getElementById("ans").innerText = answer;
@@ -293,7 +293,7 @@ var app= new Vue({
             if(inter==0){
                 inter = prevs
             }
-            inter = ((inter*180)/3.141592653589793238462643).toFixed(5);
+            inter = ((inter*180)/3.1415926535).toFixed(5);
             document.getElementById("ans").innerText = inter;
         },rad(){
             var prevs = document.getElementById("prev").textContent;
@@ -301,7 +301,7 @@ var app= new Vue({
             if(inter==0){
                 inter = prevs
             }
-            inter = ((inter*3.141592653589793238462643)/180).toFixed(5);
+            inter = ((inter*3.1415926535)/180).toFixed(5);
             document.getElementById("ans").innerText = inter;
         }
     }
