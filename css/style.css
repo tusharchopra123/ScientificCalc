@@ -107,8 +107,12 @@ sup {
     html{
         overflow: scroll;
         scroll-behavior: smooth;
-    }
+
  }
+}
+.btn-info{
+    background-color: #999999;
+}
 body{
     padding-top: 70px;
     padding-bottom: 75px;
@@ -118,6 +122,3 @@ body{
 footer{
     bottom: 0;
 }
- /* body{
-    background: url(../imgs/background.png);
-}  */
