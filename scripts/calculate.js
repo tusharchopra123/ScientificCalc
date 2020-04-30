@@ -332,5 +332,32 @@ $('#bdy').on('keypress',function(){
         document.getElementById("prev").innerText = ''
         document.getElementById("ans").innerText = 0;
         event.preventDefault();
-    }
+    }else if(event.ctrlKey){
+        if (event.keyCode == 65 || event.keyCode == 97) { // 'A' or 'a'
+        node = document.getElementById('prev');
+        if (document.body.createTextRange) {
+            const range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            console.warn("Could not select text in node: Unsupported browser.");
+        }
+          event.preventDefault();
+          return false;
+
+        }}else if(46==event.keyCode){
+            var ele  = window.getSelection();
+            var string = document.getElementById('prev').innerText;
+            if(ele.toString()===string){
+                document.getElementById('prev').innerText ='';
+                document.getElementById('ans').innerText = 0;
+            }
+        }
+ 
 })
