@@ -213,7 +213,7 @@ var app= new Vue({
             document.getElementById("ans").innerText = inter;
         },pi(){
             var prevs = document.getElementById("prev").textContent;
-            var inter = document.getElementById("ans").textContent.toFixed(5);
+            var inter = (document.getElementById("ans").textContent);
             if(prevs==''){
                 inter = 1;
             }else if(inter==prevs){
