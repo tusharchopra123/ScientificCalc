@@ -10,6 +10,7 @@ function yroot(x,y){
     return   x + '^' + y 
 }
 function myfunction(event){
+    console.log(event.keyCode)
     if(48==event.keyCode){
         document.getElementById("prev").innerText += 0
     }else if(49==event.keyCode){
@@ -42,8 +43,36 @@ function myfunction(event){
         document.getElementById("prev").innerText += 'Mod'
     }else if(40==event.keyCode){
         document.getElementById("prev").innerText += '('
+    }else if(94==event.keyCode){
+        document.getElementById("prev").innerText += '^'
     }else if(41==event.keyCode){
         document.getElementById("prev").innerText += ')'
+    }else if(115==event.keyCode){
+        document.getElementById("prev").innerText += 's'
+    }else if(105==event.keyCode){
+        document.getElementById("prev").innerText += 'i'
+    }else if(110==event.keyCode){
+        document.getElementById("prev").innerText += 'n'
+    }else if(99==event.keyCode){
+        document.getElementById("prev").innerText += 'c'
+    }else if(111==event.keyCode){
+        document.getElementById("prev").innerText += 'o'
+    }else if(115==event.keyCode){
+        document.getElementById("prev").innerText += 's'
+    }else if(116==event.keyCode){
+        document.getElementById("prev").innerText += 't'
+    }else if(97==event.keyCode){
+        document.getElementById("prev").innerText += 'a'
+    }else if(110==event.keyCode){
+        document.getElementById("prev").innerText += 'n'
+    }else if(108==event.keyCode){
+        document.getElementById("prev").innerText += 'l'
+    }else if(111==event.keyCode){
+        document.getElementById("prev").innerText += 'o'
+    }else if(103==event.keyCode){
+        document.getElementById("prev").innerText += 'g'
+    }else if(101==event.keyCode){
+        document.getElementById("prev").innerText += 'e'
     }else if(46==event.keyCode){
         document.getElementById("prev").innerText += '.'
     }else if(61==event.keyCode||13==event.keyCode){

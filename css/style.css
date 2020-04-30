@@ -110,14 +110,18 @@ sup {
 
  }
 }
+.btn-white{
+    background-color: #d4d5d6;
+}
 .btn-info{
-    background-color: #999999;
+    background-color: #C2C2C2;
+    color: black;
 }
 body{
     padding-top: 70px;
     padding-bottom: 75px;
 
-    background-color: #f1f2f3;
+    background-color: #ecedee;
 }
 footer{
     bottom: 0;
