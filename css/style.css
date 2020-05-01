@@ -133,3 +133,9 @@ footer{
     outline:none !important;
     box-shadow: none !important;
 }
+.hover1:focus{
+    background:  #82848382;
+}
+.hover1:active{
+    background:  #82848382;
+}
