@@ -83,8 +83,17 @@ function myfunction(event){
             prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
         }
        var str = mexp.eval(prevs).toFixed(5);
+       var n = str;
+       n = (n).split(".")[1];
+       if(n=="00000"){
+           str = str.split(".")[0];
+       }
+       if(!isNaN(str)){
        document.getElementById("ans").innerText = str;
        document.getElementById("prev").innerText = str;
+        }else{
+        alert("PLS ENTER THE CORRECT VALUES");
+        }
        flag=0;
        event.preventDefault();
     }
