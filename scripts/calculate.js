@@ -162,44 +162,44 @@ var app= new Vue({
             document.getElementById("ans").innerText = inter
             }
         },tan(){
+            var angle = document.getElementById("prev").textContent;
             if(angle===''){
                 document.getElementById('prev').innerText = 'tan';
             }
             else{
-            var angle = document.getElementById("prev").textContent;
             var str = 'tan('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
             }
         },asin(){
+            var angle = document.getElementById("prev").textContent;
             if(angle===''){
                 document.getElementById('prev').innerText = 'asin';
             }
             else{
-            var angle = document.getElementById("prev").textContent;
             var str = 'asin('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
             }
         },acos(){
+            var angle = document.getElementById("prev").textContent;
             if(angle===''){
                 document.getElementById('prev').innerText = 'acos';
             }
             else{
-            var angle = document.getElementById("prev").textContent;
             var str = 'acos('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
             }
         },atan(){
+            var angle = document.getElementById("prev").textContent;
             if(angle===''){
                 document.getElementById('prev').innerText = 'atan';
             }
             else{
-            var angle = document.getElementById("prev").textContent;
             var str = 'atan('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
