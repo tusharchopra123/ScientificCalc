@@ -244,7 +244,8 @@ var app= new Vue({
             document.getElementById("prev").innerText = '1/'+ document.getElementById("prev").textContent;
             var length = document.getElementById("prev").textContent.length;
             var value = document.getElementById("prev").textContent.charAt(length-1)
-            var inter = 1/parseFloat(value).toFixed(5);
+            var inter = 1/parseFloat(value);
+            inter = inter.toFixed(5)
             document.getElementById("ans").innerText = inter;
         },exp(){
             document.getElementById("prev").innerText = 'e^'+document.getElementById("prev").textContent;
