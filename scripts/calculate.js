@@ -10,7 +10,7 @@ function yroot(x,y){
     return   x + '^' + y 
 }
 function myfunction(event){
-    console.log(event.keyCode)
+
     if(48==event.keyCode){
         document.getElementById("prev").innerText += 0
     }else if(49==event.keyCode){
