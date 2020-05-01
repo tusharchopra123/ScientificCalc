@@ -141,40 +141,70 @@ var app= new Vue({
             document.getElementById("prev").innerText += 'ln'
         },cos(){
             var angle = document.getElementById("prev").textContent;
+            if(angle===''){
+                document.getElementById('prev').innerText = 'cos';
+            }
+            else{
             var str = 'cos('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },sine(){
             var angle = document.getElementById("prev").textContent;
+            if(angle===''){
+                document.getElementById('prev').innerText = 'sin';
+            }
+            else{
             var str = 'sin('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },tan(){
+            if(angle===''){
+                document.getElementById('prev').innerText = 'tan';
+            }
+            else{
             var angle = document.getElementById("prev").textContent;
             var str = 'tan('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },asin(){
+            if(angle===''){
+                document.getElementById('prev').innerText = 'asin';
+            }
+            else{
             var angle = document.getElementById("prev").textContent;
             var str = 'asin('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },acos(){
+            if(angle===''){
+                document.getElementById('prev').innerText = 'acos';
+            }
+            else{
             var angle = document.getElementById("prev").textContent;
             var str = 'acos('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },atan(){
+            if(angle===''){
+                document.getElementById('prev').innerText = 'atan';
+            }
+            else{
             var angle = document.getElementById("prev").textContent;
             var str = 'atan('+ angle +')';
             document.getElementById("prev").innerText = str;
             var inter= mexp.eval(str).toFixed(5);
             document.getElementById("ans").innerText = inter
+            }
         },x2(){
             document.getElementById("prev").innerText += '^2';
             var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
@@ -262,8 +292,12 @@ var app= new Vue({
                 prevs = yroot(document.getElementById("prev").textContent.split("^")[0],parseFloat(1/parseInt(power)))
             }
            var str = mexp.eval(prevs).toFixed(5);
+           if(!isNaN(str)){
            document.getElementById("ans").innerText = str;
            document.getElementById("prev").innerText = str;
+           }else{
+               alert("PLS ENTER THE CORRECT VALUES");
+           }
            this.symbol = ''
         },ac(){
             document.getElementById("prev").innerText = ''
