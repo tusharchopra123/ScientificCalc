@@ -11,77 +11,84 @@
     <title>About Me</title>
 </head>
 <body>
-    <header class="navbar navbar-top fixed-top mb-20 navbar-expand-md navbar-dark bg-info">
-        <a class="navbar-brand pt-1 pb-3" href="#"><img class="pt-0" src="./imgs/about-icon.png" width="27" ><a class="nav-item active h3 navbar-nav mr-auto mb-1 nav-link text-center" href="#" id="navbar-special">About Me<span class="sr-only">(current)</span></a></a>
+    <header class="navbar navbar-top fixed-top navbar-expand-md navbar-dark bg-info">
+        <a class="navbar-brand pt-1 pb-3" href="#"><img class="pt-0" src="./imgs/about-icon.png" width="25vw" height="20vh" ><a style="font-size:3.5vh" class="nav-item active h3 navbar-nav mr-auto mb-0 nav-link text-center" href="#" id="navbar-special">About Me<span class="sr-only">(current)</span></a></a>
        
     </header>
-    <div class="content"></div>
-  
-        <div class="sidebar shadow text-center border-right justify-content-center border-dark px-sm-0 py-5">
-            <p style="font-size:2.5vw" class="bg-secondary font-weight-bold text-light">Tushar Chopra</p>
-            <div class=" d-flex justify-content-center"><img src="./imgs/photo.jpg" class="photo rounded-circle float-left" width="1.5vw">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+               
+                    <div class="row shadow intro text-center border-right justify-content-center border-dark px-sm-0 py-5">
+                        <p style="font-size:2.5vw" class="col-md-12 col-sm-3 bg-secondary font-weight-bold text-light">Tushar Chopra</p>
+                        <div class="col-sm-8 col-md-12 d-flex justify-content-center"><img src="./imgs/photo.jpg" class="photo rounded-circle float-left" width="1vw" height="150vh">
+                        </div>
+                    </div>
+                        <div class="row bg-secondary pt-0 pb-0">          
+                            <a class="d-none d-sm-block col-md-2 pb-0" href="tel:+918826784339"><i class="text-light icon fas pt-2 fa-2x fa-phone-square-alt"></i> </a>
+                            <p style="font-size:2vw" class="col-md-8 d-flex justify-content-center pl-1 pt-2 pb-0 mb-0 font-weight-bold text-light">+91-8826784339</p>
+                        </div>
+                    
+                
             </div>
-            <div class="d-flex bg-secondary justify-content-center mt-4 pt-0 pb-0">          
-                <a class="d-none d-sm-none d-md-block pb-0" href="tel:+918826784339"><i class="text-light icon fas pt-2 fa-2x fa-phone-square-alt"></i> </a>
-                <p style="font-size:2vw" class="pl-1 pt-2 pb-0 mb-0 font-weight-bold text-light">+91-8826784339</p>
+            <div class="col-md-9 pt-2" >
+                <dl class="row">
+                    <dt class="col-sm-3 courses">Description</dt>
+                    <dd class="col-sm-9 courses">I have just step in the world of development and this is my first project related
+                                        to this field. I have a keen interest in development and want to pursue it as my full time opportunity.
+                    </dd>
+                
+                    <dt class="col-sm-3 courses">Education</dt>
+                    <dd class="courses col-sm-9"><blockquote class="blockquote my-0">
+                        <p class="mb-0 courses">B.Tech (Electronics and Communication)</p>
+                        <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title">Delhi Technological University</cite></footer>
+                    </blockquote> </dd>
+                
+                    <dt class="col-md-3 courses">Skills</dt>
+                    <dd class="col-md-8 ml-3 col-xs-8">
+                                        <div class="row mb-2 font-weight-bold text-wrap">
+                                        <div class="col-md-5 col-xs-4 skills text-center rounded px-md-1 px-xs-0 my-1 mr-1"> Basic Programming c++ </div> 
+                                        <div class="col-md-5 col-xs-4 skills text-center rounded px-md-1 px-xs-0 my-1 mr-1"> Data Structures and Algo</div>
+                                        </div>
+                                        <div class="row font-weight-bold font">
+                                        <div class="col-md-3 skills rounded  text-center my-1 px-1 mr-1"> Web Development</div>
+                                        <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> Python</div>
+                                        <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> MySQL</div>
+                                        <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> NodeJs</div>
+                                        </div>
+                                        </dd>
+                
+                    <dt class="col-sm-3 text-truncate courses">Courses</dt>
+                    <dd class="col-sm-9">
+                        <ul class="p-0">
+                            <li class="courses"><blockquote class="blockquote my-0">
+                                <p  class="mb-0 courses">Data Structures and Algo in C++</p>
+                                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coding Ninjas</cite></footer>
+                            </blockquote> </li>
+                            <li class="courses"><blockquote class="blockquote my-0">
+                                <p class="mb-0 courses">Data Structures and Algo in Python</p>
+                                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title">NPTEL</cite></footer>
+                            </blockquote> </li>
+                            <li class="courses"><blockquote class="blockquote my-0">
+                                <p class="mb-0 courses">Introduction to HTML5, University of Michigan</p>
+                                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
+                            </blockquote> </li>
+                            <li class="courses"><blockquote class="blockquote my-0">
+                                <p class="mb-0 courses">Introduction to CSS3, University of Michigan</p>
+                                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
+                            </blockquote> </li>
+                            <li class="courses"><blockquote class="blockquote my-0">
+                                <p class="mb-0 courses">Interactivity with Javascript, University of Michigan</p>
+                                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
+                            </blockquote> </li>
+                        </ul>
+                    </dd>
+                
+                </dl>
             </div>
-        </div>
-    <div class="rightside px-2" >
-        <dl class="row">
-            <dt class="col-sm-3 courses">Description</dt>
-            <dd class="col-sm-9 courses">I have just step in the world of development and this is my first project related
-                                 to this field. I have a keen interest in development and want to pursue it as my full time opportunity.
-            </dd>
-          
-            <dt class="col-sm-3 courses">Education</dt>
-            <dd class="courses col-sm-9"><blockquote class="blockquote my-0">
-                <p class="mb-0 courses">B.Tech (Electronics and Communication)</p>
-                <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title">Delhi Technological University</cite></footer>
-              </blockquote> </dd>
-          
-            <dt class="col-md-3 courses">Skills</dt>
-            <dd class="col-md-8 ml-3 col-xs-8">
-                                <div class="row mb-2 font-weight-bold text-wrap">
-                                <div class="col-md-5 col-xs-4 skills text-center rounded px-md-1 px-xs-0 my-1 mr-1"> Basic Programming c++ </div> 
-                                <div class="col-md-5 col-xs-4 skills text-center rounded px-md-1 px-xs-0 my-1 mr-1"> Data Structures and Algo</div>
-                                </div>
-                                 <div class="row font-weight-bold font">
-                                 <div class="col-md-3 skills rounded  text-center my-1 px-1 mr-1"> Web Development</div>
-                                 <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> Python</div>
-                                 <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> MySQL</div>
-                                 <div class="col-md-2 skills rounded  text-center my-1 px-1 mr-1"> NodeJs</div>
-                                 </div>
-                                 </dd>
-          
-            <dt class="col-sm-3 text-truncate courses">Courses</dt>
-            <dd class="col-sm-9">
-                <ul class="p-0">
-                    <li class="courses"><blockquote class="blockquote my-0">
-                        <p  class="mb-0 courses">Data Structures and Algo in C++</p>
-                        <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coding Ninjas</cite></footer>
-                      </blockquote> </li>
-                      <li class="courses"><blockquote class="blockquote my-0">
-                        <p class="mb-0 courses">Data Structures and Algo in Python</p>
-                        <footer class="blockquote-footer my-0 text-right"><cite title="Source Title">NPTEL</cite></footer>
-                      </blockquote> </li>
-                      <li class="courses"><blockquote class="blockquote my-0">
-                        <p class="mb-0 courses">Introduction to HTML5, University of Michigan</p>
-                        <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
-                      </blockquote> </li>
-                      <li class="courses"><blockquote class="blockquote my-0">
-                        <p class="mb-0 courses">Introduction to CSS3, University of Michigan</p>
-                        <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
-                      </blockquote> </li>
-                      <li class="courses"><blockquote class="blockquote my-0">
-                        <p class="mb-0 courses">Interactivity with Javascript, University of Michigan</p>
-                        <footer class="blockquote-footer my-0 text-right courses"><cite title="Source Title"> Coursersa</cite></footer>
-                      </blockquote> </li>
-                </ul>
-            </dd>
-         
-          </dl>
-        </div>
     </div>
+</div>
+</div>
     <footer class="navbar justify-content-end navbar-top p-md-1 p-sm-1 fixed-bottom mb-0 navbar-expand-md navbar-dark bg-info">
         <div class=" d-flex justify-content-end">
             <a href="https://twitter.com/tushar386" target="_blank"><i class="fab text-white fa-3x fa-twitter-square pr-2"></i></a>

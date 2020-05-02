@@ -97,7 +97,10 @@ sup {
     font-family: 'Baloo Da 2', cursive;
     font-size: 120%;
 }
-
+.courses{
+    font-size: 1.7vw;
+    font-family: 'Baloo Da 2', cursive;;
+}
 @media (min-width: 320px) and (max-width: 480px) {
     .container{
         width: 80%;
@@ -108,7 +111,18 @@ sup {
         overflow: scroll;
         scroll-behavior: smooth;
 
- }
+    }
+    .courses{
+        font-size: 120%;
+    }
+    .skills{   
+        color: aliceblue;
+        font-size: 120%;
+        margin-left: 5%;
+        width:90%;
+        /* margin-right: 10%; */
+        background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    }
 }
 .btn-white{
     background-color: #d4d5d6;
@@ -117,11 +131,11 @@ sup {
     background-color: #C2C2C2;
     color: black;
 }
-body{
-    padding-top: 75px;
-    padding-bottom: 75px;
+#bdy{
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
 
-    background-color: #ecedee;
+    background-color: #ecedee !important;
 }
 footer{
     bottom: 0;
@@ -142,7 +156,10 @@ footer{
 ul { list-style-type: none; 
     padding-left: 1.2em;
 }
-.courses{
-    font-size: 1.7vw;
-    font-family: 'Baloo Da 2', cursive;;
+
+body{
+    padding-top: 66px ;
+    padding-bottom: 75px;
+
+    background-color: #ecedee ;
 }
