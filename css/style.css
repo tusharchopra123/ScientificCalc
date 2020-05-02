@@ -51,11 +51,7 @@ padding-bottom: 0.5rem;
 .hover1:hover{
     background: #82848382;
 }
-.sidebar{
-    float: left;
-    margin-right: auto;
-    width: 20%;
-}
+
 .bg-secondary {
     font-family: 'Baloo Da 2', cursive;
     font-size: 1.7rem;
@@ -101,6 +97,12 @@ sup {
     font-size: 1.7vw;
     font-family: 'Baloo Da 2', cursive;;
 }
+body{
+    padding-top: 66px ;
+    padding-bottom: 75px;
+
+    background-color: #ecedee ;
+}
 @media (min-width: 320px) and (max-width: 480px) {
     .container{
         width: 80%;
@@ -122,6 +124,43 @@ sup {
         width:90%;
         /* margin-right: 10%; */
         background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    }
+    .intro{
+        background:linear-gradient(-80deg, #10A48FD9, #1670C0DB); 
+        margin-top:30px
+    }
+    .mycol-1{
+        width:30%;
+        align-content: center;
+        font-size: 200%;
+        padding-top: 4%;
+    }
+    .mycol-2{
+        width:70%;
+        align-content: flex-start;
+    }
+    .photo{
+        margin-top: 7%;
+        margin-bottom: 0%;
+        width: 40%;
+        height: 80%;
+        opacity: 0.9;
+    }
+    .number{
+        display: none;
+    }
+    body{
+        /* padding-top: 66px ; */
+        padding-bottom: 75px;
+        background-color: #ecedee ;
+    }
+}
+@media (min-width: 480px)  {
+    .mycol-1{
+        margin-top: 4%;
+        font-family: 'Baloo Da 2', cursive;
+        font-size: 1.7rem;
+        background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
     }
 }
 .btn-white{
@@ -157,9 +196,3 @@ ul { list-style-type: none;
     padding-left: 1.2em;
 }
 
-body{
-    padding-top: 66px ;
-    padding-bottom: 75px;
-
-    background-color: #ecedee ;
-}
