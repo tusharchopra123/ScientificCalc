@@ -26,6 +26,10 @@ padding-bottom: 0.5rem;
 }
 .bg-info{
     background: linear-gradient(-80deg, #10A48F, #1670C07D);
+    -webkit-background: linear-gradient(-80deg, #10A48F, #1670C07D);
+    -moz-background: linear-gradient(-80deg, #10A48F, #1670C07D);
+    -ms-background: linear-gradient(-80deg, #10A48F, #1670C07D);
+    -o-background: linear-gradient(-80deg, #10A48F, #1670C07D);
 }
 .specialnavbar{
     text-align: right;
@@ -55,7 +59,11 @@ padding-bottom: 0.5rem;
 .bg-secondary {
     font-family: 'Baloo Da 2', cursive;
     font-size: 1.7rem;
-    background: linear-gradient(-80deg, #10A48FB3, #1670C0A1)
+    background: linear-gradient(-80deg, #10A48FB3, #1670C0A1);
+    -webkit-background: linear-gradient(-80deg, #10A48FB3, #1670C0A1);
+    -moz-background: linear-gradient(-80deg, #10A48FB3, #1670C0A1);
+    -ms-background: linear-gradient(-80deg, #10A48FB3, #1670C0A1);
+    -o-background: linear-gradient(-80deg, #10A48FB3, #1670C0A1);
 }
 .rightside{
 padding-top: 10px;
@@ -75,6 +83,10 @@ width: 75%
     color: aliceblue;
     font-size: 1.7vw;
     background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    -webkit-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    -moz-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    -ms-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+    -o-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
 }
 .font1
 {
@@ -94,7 +106,7 @@ sup {
     font-size: 120%;
 }
 .courses{
-    font-size: 1.7vw;
+    font-size: 80%;
     font-family: 'Baloo Da 2', cursive;;
 }
 body{
@@ -124,15 +136,26 @@ body{
         width:90%;
         /* margin-right: 10%; */
         background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -webkit-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -moz-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -ms-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -o-background: linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        
     }
     .intro{
-        background:linear-gradient(-80deg, #10A48FD9, #1670C0DB); 
+        background:linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -webkit-background:linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -moz-background:linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -ms-background:linear-gradient(-80deg, #10A48FD9, #1670C0DB);
+        -o-background:linear-gradient(-80deg, #10A48FD9, #1670C0DB); 
+
         margin-top:30px
     }
     .mycol-1{
         width:30%;
         align-content: center;
         font-size: 200%;
+        font-weight: bold;
         padding-top: 4%;
     }
     .mycol-2{
@@ -160,7 +183,27 @@ body{
         margin-top: 4%;
         font-family: 'Baloo Da 2', cursive;
         font-size: 1.7rem;
+        -webkit-background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
+        -moz-background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
+        -ms-background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
+        -o-background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
         background: linear-gradient(-80deg,  #10a48fbf, #1670c0e8);
+
+
+    }
+    .photo{
+        margin-top: 2%;
+        margin-bottom: 0%;
+        width: 40%;
+        height: 80%;
+        opacity: 0.9;
+    }
+    .mycol-1{
+        font-size:3vh;
+    }
+    .number{
+        font-size:3vh;
+        font-weight: bold;
     }
 }
 .btn-white{
