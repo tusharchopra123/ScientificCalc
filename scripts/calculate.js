@@ -248,9 +248,7 @@ var app= new Vue({
             inter = inter.toFixed(5)
             document.getElementById("ans").innerText = inter;
         },exp(){
-            document.getElementById("prev").innerText = 'e^'+document.getElementById("prev").textContent;
-            var inter = mexp.eval(document.getElementById("prev").textContent).toFixed(5);
-            document.getElementById("ans").innerText = inter;
+            document.getElementById("prev").innerText += 'e^';
         },pi(){
             var prevs = document.getElementById("prev").textContent;
             var inter = (document.getElementById("ans").textContent);
