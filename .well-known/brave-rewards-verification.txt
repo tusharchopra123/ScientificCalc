@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tush.tech
+Token: e84e59b63e56cc53e33dcc469cc5b94a5796351a5d7031e41e47566f69faa22a
